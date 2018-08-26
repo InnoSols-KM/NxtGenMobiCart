@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-history-data',
   templateUrl: './history-data.component.html',
-  styleUrls: ['./history-data.component.css']
+  styleUrls: ['./history-data.component.css'],
+  providers: [NGXLogger]
 })
 export class HistoryDataComponent implements OnInit {
   public lineBigDashboardChartType;
@@ -57,7 +59,7 @@ export class HistoryDataComponent implements OnInit {
       return "rgb(" + r + ", " + g + ", " + b + ")";
     }
   }
-  constructor() { }
+  constructor(private logger: NGXLogger) { }
 
   ngOnInit() {
     this.chartColor = "#FFFFFF";

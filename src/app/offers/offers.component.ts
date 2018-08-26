@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NGXLogger } from 'ngx-logger';
 
 declare const google: any;
 
@@ -11,11 +12,12 @@ draggable?: boolean;
 @Component({
   selector: 'app-offers',
   templateUrl: './offers.component.html',
-  styleUrls: ['./offers.component.css']
+  styleUrls: ['./offers.component.css'],
+  providers: [NGXLogger]
 })
 export class OffersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private logger: NGXLogger) { }
 
   ngOnInit() {
 
@@ -111,15 +113,15 @@ export class OffersComponent implements OnInit {
         }]
 
     };
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    //var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-    var marker = new google.maps.Marker({
+    /*var marker = new google.maps.Marker({
         position: myLatlng,
         title: "Hello World!"
     });
-
+*/
     // To add the marker to the map, call setMap();
-    marker.setMap(map);
+    //marker.setMap(map);
   }
 
 }

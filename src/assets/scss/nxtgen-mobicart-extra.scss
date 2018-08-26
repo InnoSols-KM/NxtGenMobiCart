@@ -1,0 +1,51 @@
+/*!
+
+ =========================================================
+ * nxtgen-mobicart-extra-angular - v1.0.1
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/nxtgen-mobicart-extra-angular
+ * Copyright 2017 Creative Tim (https://www.creative-tim.com)
+ * Licensed under MIT (https://github.com/creativetimofficial/nxtgen-mobicart-extra/blob/master/LICENSE.md)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'nxtgen-mobicart-extra/variables';
+@import 'nxtgen-mobicart-extra/mixins';
+// Plugins CSS
+@import "nxtgen-mobicart-extra/plugins/plugin-bootstrap-switch";
+@import "nxtgen-mobicart-extra/plugins/plugin-nouislider";
+@import "nxtgen-mobicart-extra/plugins/plugin-datepicker";
+// Core CSS
+@import "nxtgen-mobicart-extra/buttons";
+@import "nxtgen-mobicart-extra/inputs";
+@import "nxtgen-mobicart-extra/checkboxes-radio";
+@import "nxtgen-mobicart-extra/progress";
+@import "nxtgen-mobicart-extra/badges";
+@import "nxtgen-mobicart-extra/pagination";
+@import "nxtgen-mobicart-extra/typography";
+@import "nxtgen-mobicart-extra/misc";
+@import "nxtgen-mobicart-extra/pills";
+// components
+@import "nxtgen-mobicart-extra/social-buttons";
+@import "nxtgen-mobicart-extra/tabs";
+@import "nxtgen-mobicart-extra/navbar";
+@import "nxtgen-mobicart-extra/dropdown";
+@import "nxtgen-mobicart-extra/alerts";
+@import "nxtgen-mobicart-extra/images";
+@import "nxtgen-mobicart-extra/popups";
+@import "nxtgen-mobicart-extra/nucleo-outline";
+@import "nxtgen-mobicart-extra/modals";
+@import "nxtgen-mobicart-extra/carousel";
+@import "nxtgen-mobicart-extra/cards";
+@import "nxtgen-mobicart-extra/footers";
+// example pages and sections
+@import "nxtgen-mobicart-extra/example-pages";
+@import "nxtgen-mobicart-extra/sections";
+@import "nxtgen-mobicart-extra/responsive";

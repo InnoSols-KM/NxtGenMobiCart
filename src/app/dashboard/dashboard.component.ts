@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
 import { SalesInvoiceService } from '../service/sales-invoice/sales-invoice.service';
+import { SalesInvoiceCustomerDataVO } from '../models/sales-invoice-customer-vo';
 import { Observable } from 'rxjs/Observable';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
 import { FormControl } from '@angular/forms';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  providers: [NGXLogger]
 })
 export class DashboardComponent implements OnInit {
   public lineBigDashboardChartType;
@@ -26,7 +29,7 @@ export class DashboardComponent implements OnInit {
   public gradientChartOptionsConfiguration: any;
   public gradientChartOptionsConfigurationWithNumbersAndGrid: any;
 
-  public customerData:Array<any>;
+  public customerData:Array<SalesInvoiceCustomerDataVO>;
   myControl: FormControl = new FormControl();
   filteredCustomer: Observable<any[]>;
 
@@ -66,9 +69,9 @@ export class DashboardComponent implements OnInit {
       return "rgb(" + r + ", " + g + ", " + b + ")";
     }
   }
-  constructor(private _salesInvoiceService:SalesInvoiceService,) { 
-    console.log("/skm/adminCustomerData/")
+  constructor(private _salesInvoiceService:SalesInvoiceService, private logger: NGXLogger) { 
     this._salesInvoiceService.getCustomerSearch().subscribe(response => this.customerData = response);
+    this.logger.info("getCustomerSearch() : "+this.customerData);
     this.filteredCustomer = this.myControl.valueChanges
     .pipe(
       startWith(''),

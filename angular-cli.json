@@ -21,6 +21,7 @@
             "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
             "../node_modules/ngx-toastr/toastr.css",
             "./assets/scss/nxtgen-mobicart.scss",
+            "./assets/scss/nxtgen-mobicart-extra.scss",
             "./assets/demo/demo.css"
         ],
         "scripts": [

@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-add-edit-customer',
   templateUrl: './add-edit-customer.component.html',
-  styleUrls: ['./add-edit-customer.component.css']
+  styleUrls: ['./add-edit-customer.component.css'],
+  providers: [NGXLogger]
 })
 export class AddEditCustomerComponent implements OnInit {
 
-  constructor(private toastr: ToastrService) {}
+  constructor(private toastr: ToastrService, private logger: NGXLogger) {}
   showNotification(from, align){
 
       const color = Math.floor((Math.random() * 5) + 1);

@@ -3,6 +3,7 @@ import { Http, Response, Headers, URLSearchParams, RequestOptions } from '@angul
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { NGXLogger } from 'ngx-logger';
 
 
 @Injectable()
@@ -10,10 +11,10 @@ export class SalesInvoiceService {
   //URL for CRUD operations
   mobicartURL = "http://localhost:3000/skm/adminCustomerData/";
   result;
-  constructor(private _http:Http) { }
+  constructor(private _http:Http, private logger: NGXLogger) { }
 
   getCustomerSearch():Observable<Array<any>>{
-    console.log("getCustomerSearch");
+    this.logger.info("Inside getCustomerSearch Service Call");
     return this._http.get(this.mobicartURL)
     .map(this.extractData)
     .catch(this.handleError);

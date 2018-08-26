@@ -28,7 +28,7 @@ import { SalesInvoiceService } from '../../service/sales-invoice/sales-invoice.s
     FormsModule,
     ChartsModule,
     NgbModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot()    
   ],
   declarations: [
     DashboardComponent,
@@ -42,7 +42,7 @@ import { SalesInvoiceService } from '../../service/sales-invoice/sales-invoice.s
     BarcodeGeneratorComponent,
     HistoryDataComponent,
     PurchaseInvoiceComponent,
-    SalesInvoiceComponent,
+    SalesInvoiceComponent
   ],
   providers: [SalesInvoiceService],
 })
