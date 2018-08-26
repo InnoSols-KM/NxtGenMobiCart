@@ -8,19 +8,19 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
-    { path: '/icons', title: 'History Data',  icon:'education_atom', class: '' },
-    { path: '/maps', title: 'Add/Edit Customer',  icon:'location_map-big', class: '' },
-    { path: '/notifications', title: 'Sales Invoice',  icon:'ui-1_bell-53', class: '' },
+    { path: '/history-data', title: 'History Data',  icon:'education_atom', class: '' },
+    { path: '/add-edit-customer', title: 'Add/Edit Customer',  icon:'location_map-big', class: '' },
+    { path: '/sales-invoice', title: 'Sales Invoice',  icon:'ui-1_bell-53', class: '' },
 
-    { path: '/user-profile', title: 'Barcode Generator',  icon:'users_single-02', class: '' },
-    { path: '/table-list', title: 'Purchase Invoice',  icon:'design_bullet-list-67', class: '' },
-    { path: '/typography', title: 'GST Return',  icon:'text_caps-small', class: '' },
+    { path: '/barcode-generator', title: 'Barcode Generator',  icon:'users_single-02', class: '' },
+    { path: '/purchase-invoice', title: 'Purchase Invoice',  icon:'design_bullet-list-67', class: '' },
+    { path: '/gst-return', title: 'GST Return',  icon:'text_caps-small', class: '' },
     { path: '/user-profile', title: 'GST Purchase',  icon:'users_single-02', class: '' },
     
     { path: '/table-list', title: 'GST Edit Purchase',  icon:'design_bullet-list-67', class: '' },
-    { path: '/typography', title: 'Preference',  icon:'text_caps-small', class: '' },
-    { path: '/typography', title: 'Offers',  icon:'text_caps-small', class: '' },
-    { path: '/typography', title: 'Logout',  icon:'text_caps-small', class: '' }
+    { path: '/gst-return', title: 'Preference',  icon:'text_caps-small', class: '' },
+    { path: '/gst-return', title: 'Offers',  icon:'text_caps-small', class: '' },
+    { path: '/gst-return', title: 'Logout',  icon:'text_caps-small', class: '' }
 ];
 
 @Component({

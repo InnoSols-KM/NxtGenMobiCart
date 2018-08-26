@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TypographyComponent } from './typography.component';
+import { BarcodeGeneratorComponent } from './barcode-generator.component';
 
-describe('TypographyComponent', () => {
-  let component: TypographyComponent;
-  let fixture: ComponentFixture<TypographyComponent>;
+describe('BarcodeGeneratorComponent', () => {
+  let component: BarcodeGeneratorComponent;
+  let fixture: ComponentFixture<BarcodeGeneratorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TypographyComponent ]
+      declarations: [ BarcodeGeneratorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypographyComponent);
+    fixture = TestBed.createComponent(BarcodeGeneratorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
