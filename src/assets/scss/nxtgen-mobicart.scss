@@ -1,0 +1,47 @@
+/*!
+
+ =========================================================
+ * Now UI Dashboard Angular - v1.0.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/nxtgen-mobicart
+ * Copyright 2018 InnoSols (https://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import "~bootstrap/scss/bootstrap";
+@import 'nxtgen-mobicart/variables';
+@import 'nxtgen-mobicart/mixins';
+// Plugins CSS
+@import "nxtgen-mobicart/plugins/plugin-animate-bootstrap-notify";
+@import "nxtgen-mobicart/plugins/plugin-perfect-scrollbar";
+// Core CSS
+@import "nxtgen-mobicart/buttons";
+@import "nxtgen-mobicart/inputs";
+@import "nxtgen-mobicart/typography";
+@import "nxtgen-mobicart/misc";
+@import "nxtgen-mobicart/checkboxes-radio";
+// components
+@import "nxtgen-mobicart/navbar";
+@import "nxtgen-mobicart/page-header";
+@import "nxtgen-mobicart/dropdown";
+@import "nxtgen-mobicart/alerts";
+@import "nxtgen-mobicart/images";
+@import "nxtgen-mobicart/nucleo-outline";
+@import "nxtgen-mobicart/tables";
+@import "nxtgen-mobicart/sidebar-and-main-panel";
+@import "nxtgen-mobicart/footers";
+@import "nxtgen-mobicart/fixed-plugin";
+// cards
+@import "nxtgen-mobicart/cards";
+@import "nxtgen-mobicart/cards/card-plain";
+@import "nxtgen-mobicart/cards/card-chart";
+@import "nxtgen-mobicart/cards/card-user";
+@import "nxtgen-mobicart/cards/card-map";
+@import "nxtgen-mobicart/responsive";

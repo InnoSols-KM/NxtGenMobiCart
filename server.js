@@ -1,20 +1,11 @@
 var express = require('express')
-const bodyParser = require('body-parser');
-const path = require('path');
-const http = require('http');
-
 var app = express()
 var cf_app = require('./app/vcap_application')
 var cf_svc = require('./app/vcap_services')
 
-const api = require('./server/api');
-
-app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-
-app.use(express.static(path.join(__dirname, 'dist')));
-
-app.use('/', api);
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jade')
+app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res) {
     res.render('pages/index', {
@@ -31,10 +22,4 @@ app.get('/', function(req, res) {
     })
 })
 
-app.listen(process.env.PORT || 4000);
-
-const server = http.createServer(app);
-
-server.listen(port, () => {
-    console.log('app running');
-});
+app.listen(process.env.PORT || 3000)
