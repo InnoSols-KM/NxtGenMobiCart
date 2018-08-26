@@ -19,6 +19,8 @@ import { ChartsModule } from 'ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 
+import { SalesInvoiceService } from '../../service/sales-invoice/sales-invoice.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { ToastrModule } from 'ngx-toastr';
     HistoryDataComponent,
     PurchaseInvoiceComponent,
     SalesInvoiceComponent,
-  ]
+  ],
+  providers: [SalesInvoiceService],
 })
 
 export class AdminLayoutModule {}

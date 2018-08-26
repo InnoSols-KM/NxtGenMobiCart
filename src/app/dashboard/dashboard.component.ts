@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { SalesInvoiceService } from '../service/sales-invoice/sales-invoice.service';
+import { Observable } from 'rxjs/Observable';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,6 +25,10 @@ export class DashboardComponent implements OnInit {
 
   public gradientChartOptionsConfiguration: any;
   public gradientChartOptionsConfigurationWithNumbersAndGrid: any;
+
+  public customerData:Array<any>;
+  myControl: FormControl = new FormControl();
+  filteredCustomer: Observable<any[]>;
 
   public lineChartType;
   public lineChartData:Array<any>;
@@ -57,7 +66,20 @@ export class DashboardComponent implements OnInit {
       return "rgb(" + r + ", " + g + ", " + b + ")";
     }
   }
-  constructor() { }
+  constructor(private _salesInvoiceService:SalesInvoiceService,) { 
+    console.log("/skm/adminCustomerData/")
+    this._salesInvoiceService.getCustomerSearch().subscribe(response => this.customerData = response);
+    this.filteredCustomer = this.myControl.valueChanges
+    .pipe(
+      startWith(''),
+      map(customerData => customerData ? this.filterCustomer(customerData) : this.customerData.slice())
+    );
+  }
+
+  filterCustomer(name: string) {
+    return this.customerData.filter(customerData =>
+      customerData.cust_phone.toLowerCase().indexOf(customerData.cust_phone.toLowerCase()) === 0);
+  }
 
   ngOnInit() {
     this.chartColor = "#FFFFFF";

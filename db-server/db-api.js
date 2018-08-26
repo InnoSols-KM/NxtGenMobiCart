@@ -29,7 +29,7 @@ db.connect((err) => {
 
 //get Customer Data 
 router.get('/skm/adminCustomerData/', function(req, res) {
-    console.log("/skm/adminCustomerData/");
+    console.log("/skm/adminCustomerData/ DB");
     let sql = "SELECT * FROM customer_details GROUP BY cust_id ORDER BY cust_name ASC";
     let query = db.query(sql, (err, result) => {
         if (err) throw err;

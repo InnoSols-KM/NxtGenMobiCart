@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class SalesInvoiceService {
   //URL for CRUD operations
-  mobicartURL = "https://kaviyamobiles-nxtgen-dev.herokuapp.com/skm/adminCustomerData/";
+  mobicartURL = "http://localhost:3000/skm/adminCustomerData/";
   result;
   constructor(private _http:Http) { }
 
@@ -17,7 +17,7 @@ export class SalesInvoiceService {
     return this._http.get(this.mobicartURL)
     .map(this.extractData)
     .catch(this.handleError);
-    //return this._http.get('').map(result => this.result = result.json().data);
+      //return this._http.get('').map(result => this.result = result.json().data);
   }
 
   private extractData(res: Response) {
