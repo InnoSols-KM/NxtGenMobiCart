@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotificationsComponent } from './notifications.component';
+import { GSTEditPurchaseComponent } from './gst-edit-purchase.component';
 
-describe('NotificationsComponent', () => {
-  let component: NotificationsComponent;
-  let fixture: ComponentFixture<NotificationsComponent>;
+describe('GSTEditPurchaseComponent', () => {
+  let component: GSTEditPurchaseComponent;
+  let fixture: ComponentFixture<GSTEditPurchaseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotificationsComponent ]
+      declarations: [ GSTEditPurchaseComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotificationsComponent);
+    fixture = TestBed.createComponent(GSTEditPurchaseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

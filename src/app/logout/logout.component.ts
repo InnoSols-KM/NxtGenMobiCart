@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-notifications',
-  templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.css']
+  selector: 'app-logout',
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.css']
 })
-export class NotificationsComponent implements OnInit {
+export class LogoutComponent implements OnInit {
 
   constructor(private toastr: ToastrService) {}
   showNotification(from, align){
