@@ -1,3 +1,5 @@
+This Branch Used for Release1 version and this cover basic components and sample service code logic
+
 # [Now UI Dashboard Angular](https://creativetimofficial.github.io/nxtgen-mobicart) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
 
 ![alt text](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)
@@ -29,7 +31,7 @@ In order for you to easily be able to use the Now UI Dashboard Angular, we have 
 4. Run in terminal: ```npm install -g @angular/cli```
 5. Then: ```npm install```
 6. And: ```npm start```
-7. Navigate to [localhost:4200](localhost:4200)
+7. Navigate to [localhost:4200](localhost:3000)
 
 ### What's included
 
